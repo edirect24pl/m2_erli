@@ -170,7 +170,7 @@ class Data extends AbstractHelper
         $this->getSalableQuantityDataBySku = $getSalableQuantityDataBySku;
         $this->resourceProductTypeConfigurable = $resourceProductTypeConfigurable;
         $this->priceRule = $priceRule;
-        $this->_helperOutput = $helperOutput;
+        $this->helperOutput = $helperOutput;
     }
 
     /**
@@ -373,7 +373,7 @@ class Data extends AbstractHelper
         $result1 = [
             'product_id' => $product->getId(),
             'name' => $product->getName(),
-            'description' =>  $this->_helperOutput->productAttribute(
+            'description' =>  $this->helperOutput->productAttribute(
                 $product,
                 $product->getDescription(),
                 'description'
@@ -412,7 +412,7 @@ class Data extends AbstractHelper
                 $parentId = $this->getParentId($product->getId());
                 $parent = $this->productRepository->getById($parentId);
                 //$parentDescription = $parent->getDescription();
-                $parentDescription = $this->_helperOutput->productAttribute(
+                $parentDescription = $this->helperOutput->productAttribute(
                     $parent,
                     $parent->getDescription(),
                     'description'

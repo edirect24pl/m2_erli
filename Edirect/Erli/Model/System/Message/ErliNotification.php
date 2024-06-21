@@ -28,7 +28,7 @@ class ErliNotification implements MessageInterface
     /**
      * @var UrlInterface
      */
-    protected $urlBuider;
+    protected $urlBuilder;
 
     /**
      * @var ResourceConnection
